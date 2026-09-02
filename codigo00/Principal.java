@@ -1,4 +1,9 @@
+package codigo00;
 import java.util.Scanner;
+
+import Endereco;
+import Pessoa;
+
 import java.util.ArrayList;
 
 public class Principal{
@@ -11,6 +16,7 @@ public class Principal{
         Pessoa obj1 = new Pessoa("Rafael",35);
         Pessoa obj2 = new Pessoa();
         Pessoa obj3 = new Pessoa();
+        Pessoa obj4 = new Pessoa("Gabriel", 29, new Endereco("A", 1, "B"));
         //Pessoa obj3;
 
         System.out.println("Nome: " + obj1.getNome());
@@ -32,16 +38,23 @@ public class Principal{
         listaP.add(obj1);
         listaP.add(obj2);
         listaP.add(obj3);
+        listaP.add(obj4);
 
         for(Pessoa auxPessoa: listaP){
             System.out.println(auxPessoa.toString());
         }
-
+        /* 
         listaP.get(1).setNome("Joaquim");
         listaP.get(1).setIdade(1);
         
         System.out.println(listaP.get(1));
         System.out.println(obj2.toString());
+        */
 
+        obj4.getEnd().setNomeRua("Av. Brasil");
+        obj4.getEnd().setNumero(12);
+        obj4.getEnd().setBairro("Brasil");
+
+        System.out.println(obj4.toString());
     }
 }
